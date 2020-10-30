@@ -1,24 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { setSailorNumber } from '../../../features/users/usersSlice';
 
 import './Sign.css';
 
 const Sign = () => {
-  const handleSubmit = () => {
-    console.log("Submitted!");
+
+  const [localSailorNumber, setLocalSailorNumber] = useState('');
+  const dispatch = useDispatch();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    dispatch(setSailorNumber(localSailorNumber));
   };
+
+  const handleChange = (event) => {
+    setLocalSailorNumber(event.target.value);
+  }
 
   return (
     <div id="sign">
       <h2>Bonjour !</h2>
       <p>Quel est votre numéro de marin ?</p>
-      <form onSubmit={handleSubmit()}>
+      <form onSubmit={event => handleSubmit(event)}>
         <div id="form-group">
           <label htmlFor="sailor-id">
-            Mon numéro est :
+            Mon numéro est
             <input
               type="text"
               name="sailor-id"
               placeholder="Exemple : 19780030"
+              onChange={event => handleChange(event)}
             />
           </label>
           <input type="submit" value="Envoyer" />
