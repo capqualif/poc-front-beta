@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { setSailorNumber } from '../../../features/users/usersSlice';
+import { getSailorCivilData } from '../../../features/sailorData/usersSlice';
 
 import './Sign.css';
 
@@ -12,7 +12,7 @@ const Sign = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(setSailorNumber(localSailorNumber));
+    dispatch(getSailorCivilData(localSailorNumber));
   };
 
   const handleChange = (event) => {

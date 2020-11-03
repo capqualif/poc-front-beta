@@ -13,7 +13,7 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <Fragment>
-            <Switch>
+            <Switch>      
               <Route exact path='/' component={Sign} /> 
             </Switch>
           </Fragment>
