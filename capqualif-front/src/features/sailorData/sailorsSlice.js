@@ -15,14 +15,14 @@ export const getSailorCivilData = createAsyncThunk(
 export const sailorSlice = createSlice({
     name: 'sailor',
     initialState: {
-        sailorCivilData: {},
-        status: 'idle'
+        sailorCivilData: {}
     },
     reducers: {
     },
     extraReducers: {
         [getSailorCivilData.fulfilled]: (state, action) => {
             state.sailorCivilData = action.payload;
+            state.status = 'fulfilled';
         }
     }
 })

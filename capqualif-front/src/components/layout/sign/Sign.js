@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { unwrapResult } from '@reduxjs/toolkit'
 import { useDispatch } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
@@ -13,9 +14,17 @@ const Sign = ({ history }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(getSailorCivilData(localSailorNumber));
-    history.push('/dashboard');
-  };
+    dispatch(getSailorCivilData(localSailorNumber))
+    .then(unwrapResult)
+    .then(originalPromiseResult => {
+      console.log(originalPromiseResult);
+      history.push('/dashboard');
+    })
+    .catch(serializedError => {
+      console.log(serializedError);
+      history.push('/error');
+    })
+  } 
 
   const handleChange = (event) => {
     setLocalSailorNumber(event.target.value);

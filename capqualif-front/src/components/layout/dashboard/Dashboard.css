@@ -1,0 +1,78 @@
+#dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 3em;
+}
+
+/* #dashboard p {
+    color: #ffffffe5;
+} */
+
+#dashboard nav {
+    align-self: flex-end;
+    margin: 1em 1em 1em 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+#dashboard nav img {
+    margin: 0 1em;
+}
+
+#dashboard nav #menu {
+    cursor: pointer;
+}
+
+#dashboard #greetings {
+    align-self: flex-start;
+    margin: 0 1em;
+}
+
+#dashboard #titles {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#dashboard #titles #ask-for-a-title {
+    margin: 3em 1em;
+    padding: 2em;
+    border: none;
+    border-radius: 2em;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#dashboard #titles {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#dashboard .card {
+    background-color: #999999;
+    border-radius: 0.5em;
+    padding: 2em;
+    margin: 3em 1em;
+}
+
+#dashboard #applications-in-progress {
+    align-self: flex-start;
+    margin: 1em;
+    background-color: #999999;
+    padding: 2em;
+    border-radius: 0.5em;
+    color: #ffffffe5;
+}
+
+#dashboard .title {
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+#dashboard #applications-in-progress ul {
+    padding-left: 1em;
+}

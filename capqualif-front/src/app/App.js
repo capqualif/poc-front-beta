@@ -1,12 +1,13 @@
-import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Provider } from 'react-redux';
 import store from './redux/store';
 
-// import './Dashboard.css';
+import './App.css';
 
 import Sign from '../components/layout/sign/Sign';
 import Dashboard from '../components/layout/dashboard/Dashboard';
+import Error from '../components/layout/error/Error';
 
 class App extends Component {
   render() {
@@ -15,12 +16,13 @@ class App extends Component {
     // TO DO : create a routes component as soon as more routes add up 
       <Provider store={store}>
         <Router>
-          <Fragment>
+          <section>
             <Switch>      
               <Route exact path='/' component={Sign} /> 
               <Route exact path='/dashboard' component={Dashboard} /> 
+              <Route exact path='/error' component={Error} /> 
             </Switch>
-          </Fragment>
+          </section>
         </Router>
       </Provider>
     );
