@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import usersReducer from '../../features/sailorData/usersSlice';
+import sailorReducer from '../../features/sailorData/sailorsSlice';
 
 const store = configureStore({
   reducer: {
-    users: usersReducer
+    sailors: sailorReducer
   }
 });
 

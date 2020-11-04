@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
-import { getSailorCivilData } from '../../../features/sailorData/usersSlice';
+import { getSailorCivilData } from '../../../features/sailorData/sailorsSlice';
 
 import './Sign.css';
 
-const Sign = () => {
+const Sign = ({ history }) => {
 
   const [localSailorNumber, setLocalSailorNumber] = useState('');
   const dispatch = useDispatch();
@@ -13,6 +14,7 @@ const Sign = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(getSailorCivilData(localSailorNumber));
+    history.push('/dashboard');
   };
 
   const handleChange = (event) => {
@@ -41,4 +43,4 @@ const Sign = () => {
   );
 };
 
-export default Sign;
+export default withRouter(Sign);

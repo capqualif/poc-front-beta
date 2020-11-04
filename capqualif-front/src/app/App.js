@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Provider } from 'react-redux';
 import store from './redux/store';
 
+// import './Dashboard.css';
+
 import Sign from '../components/layout/sign/Sign';
+import Dashboard from '../components/layout/dashboard/Dashboard';
 
 class App extends Component {
   render() {
@@ -15,6 +18,7 @@ class App extends Component {
           <Fragment>
             <Switch>      
               <Route exact path='/' component={Sign} /> 
+              <Route exact path='/dashboard' component={Dashboard} /> 
             </Switch>
           </Fragment>
         </Router>
