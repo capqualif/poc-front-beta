@@ -1,19 +1,26 @@
 #dashboard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1em 3em;
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center; */
+    /* margin: 1em 3em; */
+    display: grid;
+    grid-template-rows: 15% repeat(4, 20%);
+    grid-template-columns: repeat(4, 25%);
+    row-gap: 2em;
+    padding: 1.5em 4em;
 }
 
-/* #dashboard p {
-    color: #ffffffe5;
-} */
+#dashboard #greetings {
+    grid-row: 1;
+    grid-column: 1;
+    align-self: center;
+}
 
 #dashboard nav {
-    align-self: flex-end;
-    margin: 1em 1em 1em 2em;
+    grid-column: 4;
+    justify-self: end;
+    margin: 2em;
     display: flex;
-    justify-content: space-between;
 }
 
 #dashboard nav img {
@@ -24,48 +31,52 @@
     cursor: pointer;
 }
 
-#dashboard #greetings {
-    align-self: flex-start;
-    margin: 0 1em;
-}
-
-#dashboard #titles {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-#dashboard #titles #ask-for-a-title {
-    margin: 3em 1em;
+#dashboard #ask-for-a-title {
     padding: 2em;
     border: none;
+    background-color: #999999;
+    color: #ffffffe5;
     border-radius: 2em;
     font-weight: 700;
     cursor: pointer;
-}
-
-#dashboard #titles {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-#dashboard .card {
-    background-color: #999999;
-    border-radius: 0.5em;
-    padding: 2em;
-    margin: 3em 1em;
+    align-self: flex-start;
 }
 
 #dashboard #applications-in-progress {
-    align-self: flex-start;
-    margin: 1em;
-    background-color: #999999;
-    padding: 2em;
-    border-radius: 0.5em;
-    color: #ffffffe5;
+    grid-row: 3/5;
+}
+
+#dashboard #main-title {
+    grid-row: 2;
+    grid-column: 3;
+}
+
+#dashboard #other-titles {
+    grid-row: 3/5;
+    grid-column: 3/5;
+    display: flex;
+    flex-direction: column;
+}
+
+#dashboard #other-titles #other-titles-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#dashboard #service-lines {
+    grid-row: 5;
+    grid-column: 3/5;
+    background-color: pink;
+    align-self: center;
+}
+
+
+#dashboard #applications-in-progress ul {
+    padding-left: 2em;
+}
+
+#dashboard #applications-in-progress li:first-of-type {
+    margin-bottom: 1em;
 }
 
 #dashboard .title {
@@ -73,6 +84,16 @@
     margin-bottom: 1em;
 }
 
-#dashboard #applications-in-progress ul {
-    padding-left: 1em;
+#dashboard .card {
+    background-color: #999999;
+    border-radius: 0.5em;
+    padding: 2em;
+    color: #ffffffe5;
 }
+
+#dashboard .other-titles-card {
+    width: 30%;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
