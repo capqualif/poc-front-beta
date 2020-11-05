@@ -23,9 +23,9 @@ class App extends Component {
             <Switch>      
               <Route exact path='/' component={Sign} /> 
               <Route exact path='/dashboard' component={Dashboard} /> 
-              <Route exact path='/new-title-application/choice' component={NewTitleChoice} /> 
-              <Route exact path='/new-title-application/details' component={TitleDetails} /> 
-              <Route exact path='/new-title-application/recap' component={ApplicationRecap} /> 
+              <Route path='/new-title-application/choice' component={NewTitleChoice} /> 
+              <Route path='/new-title-application/details' component={TitleDetails} /> 
+              <Route path='/new-title-application/recap' component={ApplicationRecap} /> 
               <Route exact path='/error' component={Error} /> 
             </Switch>
           </section>

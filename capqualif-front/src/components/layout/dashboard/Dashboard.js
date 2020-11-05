@@ -1,5 +1,6 @@
 import React from 'react';
 import store from '../../../app/redux/store';
+import { Link } from 'react-router-dom';
 
 import './Dashboard.css';
 
@@ -21,9 +22,11 @@ const Dashboard = () => {
             <div id="greetings">
                 <h3>Bonjour, {store.getState().sailors.sailorBasicData.sailorCivilData.firstName} !</h3>
             </div>
-            <button id="ask-for-a-title">
-                Demander un titre
-            </button>
+            <Link to="/new-title-application/choice" id="ask-for-a-title">
+                <button>
+                    Demander un titre
+                </button>
+            </Link>
             <div id="applications-in-progress">
                 <p className="title">Mes demandes en cours</p>
                 <ul className="card">

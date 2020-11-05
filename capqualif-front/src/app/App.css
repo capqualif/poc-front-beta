@@ -6,3 +6,19 @@ html, body, * {
 body {
     background-color: rgb(243, 243, 243);
 }
+
+a, a:active, a:visited {
+    color: #ffffffe5;
+    text-decoration: none;
+}
+
+section {
+    padding: 1.8em 4em;
+}
+
+.card {
+    background-color: #999999;
+    border-radius: 0.5em;
+    padding: 2em;
+    color: #ffffffe5;
+}
