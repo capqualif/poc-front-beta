@@ -7,6 +7,9 @@ import './App.css';
 
 import Sign from '../components/layout/sign/Sign';
 import Dashboard from '../components/layout/dashboard/Dashboard';
+import NewTitleChoice from '../components/layout/new-title-application/new-title-choice/NewTitleChoice';
+import TitleDetails from '../components/layout/new-title-application/title-details/TitleDetails';
+import ApplicationRecap from '../components/layout/new-title-application/application-recap/ApplicationRecap';
 import Error from '../components/layout/error/Error';
 
 class App extends Component {
@@ -20,6 +23,9 @@ class App extends Component {
             <Switch>      
               <Route exact path='/' component={Sign} /> 
               <Route exact path='/dashboard' component={Dashboard} /> 
+              <Route exact path='/new-title-application/choice' component={NewTitleChoice} /> 
+              <Route exact path='/new-title-application/details' component={TitleDetails} /> 
+              <Route exact path='/new-title-application/recap' component={ApplicationRecap} /> 
               <Route exact path='/error' component={Error} /> 
             </Switch>
           </section>

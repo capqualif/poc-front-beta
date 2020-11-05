@@ -10,9 +10,6 @@ const Dashboard = () => {
     return (
         <div id="dashboard">
             {/* <h2>MON TABLEAU DE BORD</h2> */}
-            <div id="greetings">
-                <h3>Bonjour, {store.getState().sailors.sailorCivilData.firstName} !</h3>
-            </div>
             <nav>
                 <div id="photo">
                     <img src={sailorPicMock} alt="a fake sailor's pic"/>
@@ -21,6 +18,9 @@ const Dashboard = () => {
                     <img src={menuPicMock}/>
                 </div>
             </nav>
+            <div id="greetings">
+                <h3>Bonjour, {store.getState().sailors.sailorBasicData.sailorCivilData.firstName} !</h3>
+            </div>
             <button id="ask-for-a-title">
                 Demander un titre
             </button>
@@ -28,25 +28,28 @@ const Dashboard = () => {
                 <p className="title">Mes demandes en cours</p>
                 <ul className="card">
                     <li>CFBS : dossier en traitement ⏳</li>
-                    <li>Premiers secours</li>
+                    <li>Premiers secours : dossier à compléter 🖊️</li>
                 </ul>
             </div>
             <div id="main-title">
-                <p className="title">Mon titre principal</p>
+                <p className="title">Mon titre le plus récent</p>
                 <div className="card">Matelot Pont</div>
             </div>
             <div id="other-titles">
                 <p className="title">Mes autres titres</p>
                 <div id="other-titles-container">
-                    <div className="card other-titles-card">Matelot Pont</div>
-                    <div className="card other-titles-card">Matelot Pont</div>
-                    <div className="card other-titles-card">Matelot Pont</div>
-                    <div className="card other-titles-card">Matelot Pont</div>
+                    <div className="card other-titles-card">Brevet de capitaine 200</div>
+                    <div className="card other-titles-card">Attestation XXX</div>
+                    <div className="card other-titles-card">Certificat de formation de base à la sécurité (CFBS)</div>
+                    <div className="card other-titles-card">Certificat de formation de base à la sécurité</div>
                 </div>
 
             </div>
             <div id="service-lines">
-                Mes lignes de service
+                <p className="title">Mes lignes de service</p>
+                <div className="card service-line-card">Ba blab blab la lorem ipsum fugu dzouigi dzouigi</div>
+                <div className="card  service-line-card">Ba blab blab la lorem ipsum fugu dzouigi dzouigi</div>
+                <div className="card  service-line-card">Ba blab blab la lorem ipsum fugu dzouigi dzouigi</div>
             </div>
         </div>
     );
