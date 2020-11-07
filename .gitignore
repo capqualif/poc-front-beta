@@ -1,0 +1,6 @@
+capqualif-front/package-lock.json
+capqualif-front/yarn.lock
+capqualif-front/node-modules/
+capqualif-front/coverage/
+
+.vscode/
